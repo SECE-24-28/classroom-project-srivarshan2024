@@ -6,63 +6,71 @@
     <title>Document</title>
 </head>
 <style>
-   .outer-container {
-    border: 2px solid black;
-    height: 400px;
-    width: 80vw;
-    margin: 20px;
-    overflow: auto; 
-}
-.inner-container {
-    position: relative;
-    margin: 20px;
-    height: 600px;   
-    background-color: #f0f0f0;
-    padding: 20px;
-}
-.box {
-    width: 120px;
-    height: 60px;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    line-height: 60px;
-    margin-bottom: 20px;
-}
-.fix {
-    background-color: red;
+   *
+   {
+    padding: 0px;
+    margin: 0px;
+   }
+   nav{
     position: fixed;
-    top: 20px;
-    right: 20px;
-}
-.absolute {
-    background-color: blue;
-    position: absolute;
-    top: 40px;
-    left: 40px;
-}
-.stick {
-    background-color: green;
+    top:0px;
+    left:0px;
+    background-color: black;
+    width:100vw;
+   }
+   a{
+    color : white;
+    text-decoration: none;
+    padding-left: 10px;
+    font-size: 1.2rem;
+   }
+   #hm
+   {
+    background-color: lightgoldenrodyellow;
+    height: 80vh;
+   }
+   #ab
+   {
+    background-color: lightpink;
+    height: 80vh;
+   }
+   #con
+   {
+    background-color: lightgreen;
+    height: 80vh;
+   }
+   h1{
+    padding: 50px;
     position: sticky;
-    top: 0px;
-}
-.relative {
-    background-color: purple;
-    position: relative;
-    top: 20px;
-    left: 30px;
-}
-    
+    top :50px;
+    left: 50px;
+   }
+
+   button 
+   {
+    background-color: lime;
+    color: black;
+    position: fixed;
+    top :200px;
+    left :0px;
+   }
 
 </style>
 <body>
-    <div class="outer-container">
-    <div class="inner-container">
-        <div class="box fix">Fixed</div>
-        <div class="box absolute">absolute</div>
-        <div class="box relative">relative</div>
-        <div class="box stick">sticky</div>
-    </div>   
+   <nav>
+        <a href="#hm">Home </a><a href="#about"> About </a><a href="#contact"> Contact </a>
+    </nav>
+    <div id="hm">
+        <h1>Home</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum vitae architecto quos sapiente ipsam animi necessitatibus soluta eius labore mollitia optio voluptates, perspiciatis dolore aut placeat provident quisquam nisi.</p>
+    </div>
+    <div id="ab">
+        <h1>About</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum vitae architecto quos sapiente ipsam animi necessitatibus soluta eius labore mollitia optio voluptates, perspiciatis dolore aut placeat provident quisquam nisi.</p>
+    </div>
+    <div id="con">
+        <h1>Contact</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum vitae architecto quos sapiente ipsam animi necessitatibus soluta eius labore mollitia optio voluptates, perspiciatis dolore aut placeat provident quisquam nisi.</p>
     </div>
 </body>
 </html>
