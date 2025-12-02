@@ -6,71 +6,33 @@
     <title>Document</title>
 </head>
 <style>
-   *
-   {
-    padding: 0px;
-    margin: 0px;
-   }
-   nav{
-    position: fixed;
-    top:0px;
-    left:0px;
-    background-color: black;
-    width:100vw;
-   }
-   a{
-    color : white;
-    text-decoration: none;
-    padding-left: 10px;
-    font-size: 1.2rem;
-   }
-   #hm
+   .container
    {
     background-color: lightgoldenrodyellow;
-    height: 80vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
+    height: 200px;
+    align-items: center;
+    flex-direction: row;
    }
-   #ab
-   {
-    background-color: lightpink;
-    height: 80vh;
-   }
-   #con
-   {
-    background-color: lightgreen;
-    height: 80vh;
-   }
-   h1{
-    padding: 50px;
-    position: sticky;
-    top :50px;
-    left: 50px;
-   }
-
-   button 
-   {
-    background-color: lime;
-    color: black;
-    position: fixed;
-    top :200px;
-    left :0px;
+   .box{
+    width: 100px;
+    height: 50px;
+    padding: 20px;
+    background-color: paleturquoise;
+    color: cadetblue;
    }
 
 </style>
 <body>
-   <nav>
-        <a href="#hm">Home </a><a href="#about"> About </a><a href="#contact"> Contact </a>
-    </nav>
-    <div id="hm">
-        <h1>Home</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum vitae architecto quos sapiente ipsam animi necessitatibus soluta eius labore mollitia optio voluptates, perspiciatis dolore aut placeat provident quisquam nisi.</p>
-    </div>
-    <div id="ab">
-        <h1>About</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum vitae architecto quos sapiente ipsam animi necessitatibus soluta eius labore mollitia optio voluptates, perspiciatis dolore aut placeat provident quisquam nisi.</p>
-    </div>
-    <div id="con">
-        <h1>Contact</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum vitae architecto quos sapiente ipsam animi necessitatibus soluta eius labore mollitia optio voluptates, perspiciatis dolore aut placeat provident quisquam nisi.</p>
-    </div>
+    <div class="container">
+   <div class="box">item-1</div>
+   <div class="box">item-2</div>
+   <div class="box">item-3</div>
+   <div class="box">item-4</div>
+   <div class="box">item-5</div>
+   </div>
 </body>
 </html>
