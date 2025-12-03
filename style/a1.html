@@ -3,76 +3,100 @@
 <head>
     <title>Responsive Image + Text</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #ef081b, #c486ba);
-            font-family: Arial, sans-serif;
+       *{
+            margin: 0px;
+            padding: 0px;
         }
-
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .text-box {
-            flex: 1;
-            color: rgb(4, 144, 244);
-            font-size: 24px;
-            font-weight: bold;
-            text-align: left;
-            min-width: 250px;
-        }
-
-        .image-box {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            min-width: 250px;
-        }
-
-        .image-box img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(215, 23, 23, 0.4);
-            transition: transform 0.3s;
-        }
-
-        .image-box img:hover {
-            transform: scale(1.05);
-        }
-        .container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .text-box {
-                text-align: center;
-            }
-        
+      ol{
+        list-style-type: none;
+        flex-wrap: wrap;
+        display: flex;
+      }
+      li,h1{
+        color: white;
+        padding-left: 5px;
+      }
+      li{
+        font-size: 1.2rem;
+      }
+      video{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+      }
+      nav
+      {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* background-color: black; */
+        align-items: center;
+      }
+      .text{
+        position: fixed;
+        top: 250px;
+        left: 20px;
+      }
+      p,h3{
+        color: white;
+        width: 600px;
+      }
+      button{
+        padding: 10px;
+        border-radius:10px;
+        margin-top:10px;
+        transition: all 0.3s;
+      }
+      button:hover{
+        letter-spacing: 4px;
+        background-color: aquamarine;
+        color: black;
+      }
+     img{
+        width: 30px;
+        height: 20px;
+     }
+     footer{
+      position: fixed;
+      left: 20px;
+      bottom: 10px;
+     }
+     li:hover
+     {
+        transform: translateY(-5px);
+     }
     </style>
 </head>
 
 <body>
-
-<div class="container">
-    
-   
-    <div class="text-box">
-        hey all whats up<br>
-        Mern Internship is going well
-    </div>
-
- 
-    <div class="image-box">
-        <img src="https://sp.yimg.com/ib/th/id/OIP.oN9zngiIwYMrbSfi3nIwXgHaEK?pid=Api&w=148&h=148&c=7&dpr=2&rs=1" height="400px" width="400px">
-    </div>
-
-</div>
-
+ <nav>
+    <h1>Travel</h1>
+    <ol>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Gallery</li>
+    </ol>
+ </nav>
+ <main>
+    <video src="video.mp4" autoplay controls loop ></video>
+ </main>
+ <div class="text">
+    <h3>NEVER STOP</h3>
+    <h1>EXPLORE THE WORLD</h1>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil amet debitis alias minima, autem quos sint! Facere dolor repudiandae fugit in voluptatibus dolorem, tempore, ab laborum incidunt, magni quia!</P>
+    <button>EXPLORE</button>
+ </div>
+ <footer>
+    <ol>
+        <li><img src="https://up.yimg.com/ib/th/id/OIP.912Uh02FWn_PzJItiaxegAHaFQ?pid=Api&rs=1&c=1&qlt=95&w=139&h=98"></li>
+        <li><img src="https://tse2.mm.bing.net/th/id/OIP.eMTg05HjbypqvlivEJRGpAHaEK?pid=Api&P=0&h=180"></li>
+        <li><img src="https://tse1.mm.bing.net/th/id/OIP.VgfWevmVdjRKHG8bfhpVsgHaHa?pid=Api&P=0&h=180"></li>
+    </ol>
+ </footer>
 </body>
 </html>
