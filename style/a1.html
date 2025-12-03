@@ -1,55 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-   .container
-   {
-    background-color: lightgoldenrodyellow;
-    display: flex;
-    flex-flow: nowrap;
-    justify-content: center;
-    gap: 10px;
-    height: 800px;
-    align-items: center;
-    flex-direction: row;
-   }
-    .container{
-        flex-wrap: wrap;
-    }
-   .box{
-    width: 200px;
-    height: 600px;
-    padding: 20px;
-    background-color: paleturquoise;
-    color: cadetblue;
-    margin: auto;
-   }
+    <title>Responsive Image + Text</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ef081b, #c486ba);
+            font-family: Arial, sans-serif;
+        }
 
-</style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .text-box {
+            flex: 1;
+            color: rgb(4, 144, 244);
+            font-size: 24px;
+            font-weight: bold;
+            text-align: left;
+            min-width: 250px;
+        }
+
+        .image-box {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            min-width: 250px;
+        }
+
+        .image-box img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(215, 23, 23, 0.4);
+            transition: transform 0.3s;
+        }
+
+        .image-box img:hover {
+            transform: scale(1.05);
+        }
+        .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .text-box {
+                text-align: center;
+            }
+        
+    </style>
+</head>
+
 <body>
-    <div class="container">
-   <div class="box">
-   <h2>Card-1</h2>
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nesciunt saepe quaerat exercitationem accusantium adipisci repellat nihil, veritatis voluptas, expedita error necessitatibus corporis maiores cum voluptatibus minima rerum est ex!</p>
-   </div>
-   <div class="box">
-    <h2>Card-2</h2>
-   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit deleniti inventore quos est! Illo veniam possimus dolores dolore deserunt. Nostrum, ad labore ullam dolor quo itaque eligendi minima perferendis consequatur?</p>
-   </div>
-   <div class="box"><h2>Card-3</h2>
-   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis voluptas sequi ab, aspernatur exercitationem magni consequatur tempore laboriosam accusantium tenetur obcaecati quo repellat ducimus cumque atque ex repellendus labore culpa?</p>
-   </div>
-   <div class="box"><h2>Card-4</h2>
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere provident commodi aperiam voluptatum atque odio. Deserunt veritatis, voluptate magni praesentium nostrum provident ad eligendi, maiores vero id nam maxime amet!</p>
-   </div>
-   <div class="box">
-    <h2>Card-5</h2>
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, magni possimus labore magnam dolor, aspernatur aliquam eligendi cupiditate commodi ducimus libero nulla soluta quas corrupti, laborum voluptas optio est ab!</p>
-   </div>
-   </div>
+
+<div class="container">
+    
+   
+    <div class="text-box">
+        hey all whats up<br>
+        Mern Internship is going well
+    </div>
+
+ 
+    <div class="image-box">
+        <img src="https://sp.yimg.com/ib/th/id/OIP.oN9zngiIwYMrbSfi3nIwXgHaEK?pid=Api&w=148&h=148&c=7&dpr=2&rs=1" height="400px" width="400px">
+    </div>
+
+</div>
+
 </body>
 </html>
