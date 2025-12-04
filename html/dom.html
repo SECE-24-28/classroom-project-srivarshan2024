@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function press(){
+        let hey=document.getElementById("tig");
+        hey.innerHTML="Tiger is National Animal of India "
+        let body=document.getElementById("main");
+        let hd=document.createElement("h1");
+        hd.innerHTML=hey+"is National Animal of India";
+        hd.style.backgroundColor="Black";
+        hd.style.color="White";
+        hd.style.alignItems="center";
+        body.append(hd);
+    }
+</script>
+<body id="main">
+    <h1 id="tig">Tiger</h1>
+    <button onclick="press()" >Click Me</button>
+</body>
+</html>
