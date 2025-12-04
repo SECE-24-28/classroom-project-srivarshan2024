@@ -6,20 +6,23 @@
     <title>Document</title>
 </head>
 <script>
-    function press(){
-        let hey=document.getElementById("tig");
-        hey.innerHTML="Tiger is National Animal of India "
+    function press1(){
+
         let body=document.getElementById("main");
-        let hd=document.createElement("h1");
-        hd.innerHTML=hey+"is National Animal of India";
-        hd.style.backgroundColor="Black";
-        hd.style.color="White";
-        hd.style.alignItems="center";
-        body.append(hd);
+        let hd=document.getElementById("hd");
+        alert("Deletion SuccessFull...")
+        body.removeChild(hd);
     }
+    let btn=document.getElementById("bt");
+    btn.addEventListener("click",function()
+    {
+        alert("Success..")
+    }
+)
 </script>
 <body id="main">
-    <h1 id="tig">Tiger</h1>
-    <button onclick="press()" >Click Me</button>
+    <h1 id="hd">Tiger</h1>
+    <button onclick="press1()" >Click Me</button>
+    <button id="bt">Press Me</button>
 </body>
 </html>
