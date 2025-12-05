@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fetch data fron Rset API</h1>
+    <button id="btn" onclick="fetchrecord()">Get data</button>
+    <label>Enter text :</label>
+    <input type="text" id="txt">
+     <div id="main"></div>
+    <script>
+
+    let bt = document.getElementById("btn");
+    let body=document.getElementById("main");
+    body.innerHTML=""
+
+    async function fetchrecord()
+    {
+    try{
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data = await res.json();
+    data.forEach((obj)=> 
+    {
+       let para=document.createElement("div");
+       para.innerHTML=`<b>${obj.name}</b><br>${obj.email}<br>${obj.username}<br>`
+       body.appendChild(para)
+    }
+    )
+    }
+    catch(error){
+        body.innerHTML="Error "+error;
+    
+    }
+    }
+    data = data.filter((d)=>{
+        return d.name.includes(document.getElementById("txt").value)
+    })
+    
+    
+
+    </script>
+</body>
+</html>
