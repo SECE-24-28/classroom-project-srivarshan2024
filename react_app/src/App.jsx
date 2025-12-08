@@ -2,17 +2,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Header from './Header'
+import './Style.css'
 
 function App() {
-let name="Varshan"
-let nums=[11,22,33]
+  let demo=(name)=>{
+    console.log("Hey 😉 "+name)
+  }
   return (
     <>
-      <h1>Hey I am {name}</h1>
-      <p>Lucky number :{nums}</p>
-      <p>{"true"}</p>
-      <p>{true}</p>
-      <p>{JSON.stringify({name:"varshan",age:19})}</p>
+      <button onClick={()=>demo("Varshan")}>Click Me</button>
+      <Header/>
     </>
   )
 }
