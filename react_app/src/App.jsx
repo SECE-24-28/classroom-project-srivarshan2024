@@ -6,8 +6,10 @@ import Header from './Header'
 import './Style.css'
 
 function App() {
+  let [num,setNum]=useState(100);
   let demo=(name)=>{
     console.log("Hey 😉 "+name)
+    console.log(num)
   }
   return (
     <>
