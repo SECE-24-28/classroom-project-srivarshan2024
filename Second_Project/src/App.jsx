@@ -26,11 +26,27 @@ function App() {
        const newList=list.map((ls)=>(ls.id===id)?({...ls,fee:!ls.fee}):(ls))
        setList(newList)
   }
+  const Addstudnets=()=>{
+    const sname=document.querySelector('.in').value;
+    const newStudent={id:list.length+1,sname:sname,fee:false};
+    setList([...list,newStudent]);
+    document.querySelector('.in').value='';
+  }
+  const SearchStudent=()=>{
+    const sname=document.querySelectorAll('.in')[1].value;
+    const newList=list.filter((ls)=>ls.sname.toLowerCase().includes(sname.toLowerCase()));
+    setList(newList);
+    document.querySelectorAll('.in')[1].value='';
+  }
   return (
     <>
-    <Header />
+    {/* <Header /> */}
     <div className="container">
      <h1>Student List</h1>
+     <input type='text' placeholder='New Student'className='in'></input>
+     <button onClick={Addstudnets}> ADD </button><br></br><br></br>
+     <input type='text' placeholder='search' className='in'></input>
+     <button onClick={SearchStudent}>search</button>
      <hr />
      <ul >
      {

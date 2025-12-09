@@ -5,30 +5,37 @@
   text-align: center;
   gap:10px;
 }
+
 .container{
   justify-content: center;
   gap: 20px;
   width: 500px;
-  height: 700px;
-  background-color: aliceblue;
+  height: 900px;
+  background-color: paleturquoise;
   color: black;
-  
 }
-/* .btn{
-  padding: 10px;
-  border-radius: 5px;
-} */
+
  .btn {
   display: flex;
-  /* justify-content: space; */
   align-items: center;
   padding: 10px;
   border-radius: 5px;
   list-style: none;
+  gap: 10px;
 }
 
 .btn button {
   margin-left: auto;
+}
+
+button
+{
+    margin-left: auto;
+}
+
+.in{
+  width: 150px;
+  height: 25px;
 }
 
 
