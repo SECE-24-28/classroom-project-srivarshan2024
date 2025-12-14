@@ -19,7 +19,7 @@ function App() {
 
    const handleDelete=(id)=>{
      const newList=list.filter((ls)=>ls.id!=id) 
-      setList(newList)
+      setList(newList)                                                                                                                                                                                                                                                                           
    }
 
    const handleCheck=(id)=>{
