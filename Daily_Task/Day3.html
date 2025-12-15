@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Counter App</title>
+<style>
+:root{
+    --accent:#333;
+    --bg:#f5f7fa;
+    --card:#ffffff;
+    --primary:#4caf50;
+    --secondary:#e0e0e0;
+}
+
+html,body{
+    height:100%;
+    margin:0;
+    font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background:var(--bg);
+    color:var(--accent);
+}
+
+.card{
+    width:320px;
+    max-width:90%;
+    margin:48px auto;
+    padding:20px;
+    background:var(--card);
+    border-radius:10px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    text-align:center;
+}
+
+h1{ font-size:1.25rem; margin:0 0 12px; }
+
+.display{
+    font-size:3rem;
+    font-weight:600;
+    padding:12px 0;
+    margin-bottom:12px;
+}
+
+.controls{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    margin-bottom:12px;
+}
+
+button{
+    border:0;
+    border-radius:8px;
+    padding:8px 14px;
+    cursor:pointer;
+    background:var(--primary);
+    color:#fff;
+    font-size:1rem;
+    transition:transform .08s ease, box-shadow .08s ease;
+}
+
+button:active{ transform:translateY(1px); }
+button:focus{ outline:2px solid rgba(76,175,80,0.25); }
+
+button.secondary{
+    background:var(--secondary);
+    color:var(--accent);
+}
+
+button.large{ padding:12px 18px; font-size:1.25rem; }
+
+.reset{
+    background:transparent;
+    color:#666;
+    text-decoration:underline;
+    padding:6px;
+    margin-top:6px;
+}
+
+.hint{ font-size:0.85rem; color:#666; margin-top:8px; }
+</style>
+</head>
+<body>
+    <main class="card" role="application" aria-label="Counter app">
+        <h1>Simple Counter</h1>
+        <div id="count" class="display" aria-live="polite">0</div>
+
+        <div class="controls" role="group" aria-label="Counter controls">
+            <button id="decrease" class="large secondary" aria-label="Decrease">-</button>
+            <button id="increase" class="large" aria-label="Increase">+</button>
+        </div>
+
+        <button id="reset" class="reset" title="Reset counter">Reset</button>
+        <div class="hint">Use the buttons or press ArrowUp / ArrowDown</div>
+    </main>
+
+    <script>
+        (function () {
+            const display = document.getElementById('count');
+            const inc = document.getElementById('increase');
+            const dec = document.getElementById('decrease');
+            const reset = document.getElementById('reset');
+
+            let value = 0;
+
+            function render() {
+                display.textContent = value;
+                display.style.color = value === 0 ? 'var(--accent)' : value > 0 ? '#7efcbd' : '#ffb4b4';
+            }
+
+            inc.addEventListener('click', () => { value += 1; render(); });
+            dec.addEventListener('click', () => { value -= 1; render(); });
+            reset.addEventListener('click', () => { value = 0; render(); });
+
+           
+
+            render();
+        })();
+    </script>
+</body>
+</html>
