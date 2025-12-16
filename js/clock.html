@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> DIGITAL CLOCK</h1>
+    <h2 id="clk"></h2>
+    <script>
+        let t=document.getElementById("clk");
+        let s=0,m=50,h=14;
+        function time(){
+            if(s==60){
+                s=0;
+                m++;
+            }
+            if(m==60){
+                h++;
+                m=0;
+            }
+            if(h==24){
+                h=0;
+            }
+            t.innerHTML=h+":"+m+":"+s;
+            s++;
+        }
+        setInterval(time,1000)
+    </script>
+</body>
+</html>

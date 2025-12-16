@@ -1,0 +1,56 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.container {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: #111;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  list-style: none;
+  background: #f7f7f7;
+}
+
+.btn .cbox {
+  margin-right: 0.5rem;
+}
+
+.btn label {
+  flex: 1;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+button {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.in {
+  width: 100%;
+  padding: 0.45rem 0.5rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel</title>
+    <style>
+       *{
+            margin: 0px;
+            padding: 0px;
+        }
+      ol{
+        list-style-type: none;
+        flex-wrap: wrap;
+        display: flex;
+      }
+      li,h1{
+        color: white;
+        padding-left: 5px;
+      }
+      li{
+        font-size: 1.2rem;
+      }
+      video{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        
+      }
+      nav
+      {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* background-color: black; */
+        align-items: center;
+      }
+      .text{
+        position: fixed;
+        top: 250px;
+        left: 20px;
+      }
+      p,h3{ 
+        color: black;
+        width: 600px;
+      }
+      button{
+        padding: 10px;
+        border-radius:10px;
+        margin-top:10px;
+        transition: all 0.3s;
+      }
+      button:hover{
+        letter-spacing: 4px;
+        background-color: aquamarine;
+        color: black;
+      }
+     img{
+        width: 30px;
+        height: 20px;
+     }
+     footer{
+      position: fixed;
+      left: 20px;
+      bottom: 10px;
+     }
+     li:hover
+     {
+        transform: translateY(-5px);
+     }
+     .hey1{
+        color: black;
+     }
+    </style>
+</head>
+
+<body>
+ <nav>
+    <h1>SriVarshan R</h1>
+    <ol>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Achivements</li>
+    </ol>
+ </nav>
+ <main>
+    <video src="video.mp4" autoplay muted loop playsinline ></video>
+ </main>
+ <div class="text">
+    <h3>NEVER STOP</h3>
+    <h1 class="hey1">EXPLORE THE WORLD</h1>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil amet debitis alias minima, autem quos sint! Facere dolor repudiandae fugit in voluptatibus dolorem, tempore, ab laborum incidunt, magni quia!</P>
+    <button>EXPLORE</button>
+ </div>
+ <footer>
+    <ol>
+        <li><img src="https://up.yimg.com/ib/th/id/OIP.912Uh02FWn_PzJItiaxegAHaFQ?pid=Api&rs=1&c=1&qlt=95&w=139&h=98"></li>
+        <li><img src="https://tse2.mm.bing.net/th/id/OIP.eMTg05HjbypqvlivEJRGpAHaEK?pid=Api&P=0&h=180"></li>
+        <li><img src="https://tse1.mm.bing.net/th/id/OIP.VgfWevmVdjRKHG8bfhpVsgHaHa?pid=Api&P=0&h=180"></li>
+    </ol>
+ </footer>
+</body>
+</html>

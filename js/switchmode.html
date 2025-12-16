@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #btn{
+        padding: 10px;
+        margin-left: 47%;
+        margin-top: 20%;
+        border-radius: 100%;
+        width: 100px;
+        height: 100px;
+        justify-content: center;
+    }
+    h1{
+        text-align: center;
+    }
+</style>
+<body id="main">
+    <h1 id="mode">Light Mode</h1>
+    <button id="btn">Switch Mode</button>
+    <script>
+        let body=document.getElementById("main");
+        let m=document.getElementById("mode");
+        let bt=document.getElementById("btn");
+        bt.addEventListener("click",mode)
+        function mode(){
+            if(m.innerHTML=="Light Mode"){
+                body.style.background="Black";
+                body.style.color="white";
+                m.innerHTML="Dark Mode"
+                m.style.color="white";
+                
+            }
+            else{
+                body.style.background="white";
+                body.style.color="black";
+                m.innerHTML="Light Mode"
+                m.style.color="black";
+            }
+        }
+    </script>
+</body>
+</html>
