@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter task" id="txt">
+    <button onclick="Add()">Add</button>
+    <button onclick="remove()">Remove</button>
+    <ol id="main"></ol>
+
+    <script>
+
+    let btn=document.getElementById("bt");
+    let li;
+
+    function Add(){
+    
+    let body=document.getElementById("main");
+    li = document.createElement("li");
+    li.innerHTML=document.getElementById("txt").value;
+    body.appendChild(li);
+    }
+    function remove(){
+    let body=document.getElementById("main");
+    li.remove()
+    }
+</script>
+</body>
+</html>

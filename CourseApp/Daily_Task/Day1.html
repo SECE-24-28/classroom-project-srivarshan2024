@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>College Student Login</title>
+</head>
+<body>
+    <header>
+        <h1>College Student Login</h1>
+    </header>
+
+    <main>
+        <form action="/login" method="post" autocomplete="on" novalidate>
+            <fieldset>
+                <legend>Sign in to your student account</legend>
+
+                <div>
+                    <label for="student-id">Student ID</label><br>
+                    <input id="student-id" name="studentId" type="text" pattern="[A-Za-z0-9\-]{3,20}" required placeholder="e.g., S12345">
+                </div>
+
+                <div>
+                    <label for="email">College Email</label><br>
+                    <input id="email" name="email" type="email" required placeholder="you@college.edu">
+                </div>
+
+                <div>
+                    <label for="password">Password</label><br>
+                    <input id="password" name="password" type="password" minlength="6" required>
+                </div>
+
+                <div>
+                    <input id="remember" name="remember" type="checkbox">
+                    <label for="remember">Remember me</label>
+                </div>
+
+                <div>
+                    <button type="submit">Login</button>
+                </div>
+
+                <p>
+                    <a href="/forgot-password">Forgot password?</a>
+                    &nbsp;|&nbsp;
+                    <a href="/register">Create an account</a>
+                </p>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>

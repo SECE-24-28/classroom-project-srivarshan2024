@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=0;
+        let arr=["Coffee.png","ta.jpg","tn.jpg"]
+        function next(){
+        num++;
+        if(num>2)
+           num=0;
+        let img = document.getElementById("im");
+        img.src=arr[num];    
+        }
+        function prev(){
+        num--;
+        if(num<0)
+          num=2;
+        let img = document.getElementById("im");
+        img.src=arr[num%3];
+        }
+    </script>
+   <img src="tn.jpg" width="400px" height="400px" id="im">
+   <button onclick="next()"> Next Image</button>
+   <button onclick="prev()">Previous Image</button>
+</body>
+</html>
